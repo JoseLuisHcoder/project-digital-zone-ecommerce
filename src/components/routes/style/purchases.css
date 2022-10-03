@@ -1,0 +1,11 @@
+.purchases {
+    
+    margin-top: 45px;
+    padding: 1rem;
+    gap: 1rem;
+}
+.purchases__detail {
+    
+    gap: 1rem;
+    margin-bottom: 10px;
+}

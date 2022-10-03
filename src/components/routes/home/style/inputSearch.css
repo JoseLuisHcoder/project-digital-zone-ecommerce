@@ -1,0 +1,29 @@
+.form_input {
+    
+    margin-top: 65px;
+    display: flex;
+    justify-content: center;
+    
+    }
+.search {
+    display: flex;
+    justify-content: center;
+    
+    height: 30px;
+    width: 90%;
+}
+
+.input__s {
+width: 100%;
+border: 1px solid var(--border-color);
+}
+.input__btn {
+background-color: var(--color-6);
+border: none;
+color: var(--color-primary);
+aspect-ratio: 1;
+font-size: 1.1rem;
+padding-top: 6px;
+
+}
+

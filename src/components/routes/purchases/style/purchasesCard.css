@@ -1,0 +1,46 @@
+.purchase__card {
+    
+    display: flex;
+    flex-direction: column;
+    
+    border: 1px solid var(--border-color);
+    border-radius: 7px;
+    margin-bottom: 15px;
+}
+.purchase__date {
+    
+    width: 100%;
+    padding: 0.2rem 0.5rem;
+    
+    
+}
+.purchases__products {
+    border: 1px solid var(--border-color);
+    padding: 0;
+
+}
+
+.detail__pur {
+    
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    margin: 0.5rem 0.2rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    margin-bottom: 10px;
+
+}
+.detail__pur__title {
+    margin-left: 15px;
+
+}
+.detail__pur__quantity {
+    text-align: center;
+    border: 1px solid var(--border-color);
+    margin: 0 15px 17px 15px;
+    
+
+}
+.detail__pur__price {
+
+}
