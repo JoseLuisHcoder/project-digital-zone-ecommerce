@@ -11,6 +11,7 @@
     
     height: 30px;
     width: 90%;
+    margin-top: 40px;
 }
 
 .input__s {
@@ -25,5 +26,13 @@ aspect-ratio: 1;
 font-size: 1.1rem;
 padding-top: 6px;
 
+}
+
+@media screen and (min-width: 720px) {
+    .search {
+        width: 800px;
+       padding: 0 3rem;
+        margin: 40px auto ;
+    }
 }
 

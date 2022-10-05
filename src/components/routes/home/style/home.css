@@ -38,7 +38,7 @@ position: absolute;
 width: calc(100% - 40px);
 height: calc(100% - 40px);
 object-fit: contain;
-z-index: -1;
+z-index: 1;
 opacity: 0;
 transition: opacity 400ms ease-out;
 }
