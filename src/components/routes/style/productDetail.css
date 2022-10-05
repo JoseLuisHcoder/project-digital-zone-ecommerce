@@ -6,15 +6,19 @@
     height: 400px;
     
     padding: 20px 40px 40px;
-
+    margin-top: 90px;
     position: relative;
     overflow: hidden;
+    margin-bottom: 20px;
+    
+
    
 }
 .slider__container {
     width: 300%;
     height: 100%;
     display: flex;
+    
     
 /* empieza el movimiento*/
 transform: translateX(calc(-100% * 0 / 3));

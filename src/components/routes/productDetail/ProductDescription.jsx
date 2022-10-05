@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import getConfig from '../../../utils/getConfig'
+import './style/productDescription.css'
 
 const ProductDescription = ({productInfo}) => {
   const [counter, setCounter] = useState(1)
@@ -31,17 +32,17 @@ const ProductDescription = ({productInfo}) => {
               <h3>Price</h3>
               <span>{productInfo?.price}</span>
             </article>
-            <article>
+            <article className='product__quantity'>
               <h3>Quantity</h3>
-              <div>
-                <button onClick={handleMinus}>-</button>
+              <div className='product__handle'>
+                <button className='product__rest' onClick={handleMinus}>-</button>
                 <div>{counter}</div>
-                <button onClick={handlePlus}>+</button>
+                <button className='product__add' onClick={handlePlus}>+</button>
               </div>
             </article>
 
         </div>
-        <button onClick={handleAddCart}>Add to cart</button>
+        <button className='product__btn' onClick={handleAddCart}>Add to cart</button>
 
     </section> 
   )
