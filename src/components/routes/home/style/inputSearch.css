@@ -25,7 +25,13 @@ color: var(--color-primary);
 aspect-ratio: 1;
 font-size: 1.1rem;
 padding-top: 6px;
+cursor: pointer;
+transition: 0.2s;
 
+}
+.input__btn:hover {
+    background-color: var(--secondary-color);
+    color: white;
 }
 
 @media screen and (min-width: 720px) {
