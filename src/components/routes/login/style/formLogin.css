@@ -9,9 +9,12 @@
 }
 .login__form {
     width: max-content;
+    
     box-shadow: 0 0 20px #0005;
     padding: 20px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
     
 }
 .login__test {
@@ -32,4 +35,19 @@
 }
 .login__title {
     margin-bottom: 7px;
+}
+.formLogin__btn {
+    margin-top: 15px;
+    width: 100%;
+    cursor: pointer;
+    background-color: var(--color-6);
+    border: none;
+    border-radius: 3px;
+}
+.formLogin__btn__signup {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: var(--secondary-color);
+    margin-top: 10px;
 }

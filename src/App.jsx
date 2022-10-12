@@ -13,9 +13,11 @@ import { useEffect } from 'react'
 import axios from 'axios'
 import Cart from './components/routes/shared/styles/Cart'
 import ProtectedRoutes from './components/routes/routes1/ProtectedRoutes'
+import FormUser from './components/routes/users/FormUser'
 
 
 function App() {
+  const [formIsClose, setFormIsClose] = useState(true)
 
   // COMENTAMOS PORQUE SOLO SE NECESITA PARA CREAR UN USARIO NUEVO
   // useEffect(() => {
@@ -40,8 +42,8 @@ function App() {
     <div className='App'>
       <Header />
       <Routes>
-        <Route  path='/' element={<Home />}/>
-        <Route  path='/login' element={<Login />}/>
+        <Route  path='/' element={<Home formIsClose={formIsClose} />}/>
+        <Route  path='/login' element={<Login setFormIsClose={setFormIsClose} />}/>
         <Route  path='/product/:id' element={<ProductDetail />}/>
         <Route element={<ProtectedRoutes />}>
             <Route  path='/purchases' element={<Purchases />}/>

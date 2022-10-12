@@ -4,7 +4,7 @@ import FormLogin from './login/FormLogin'
 import UserLogged from './login/UserLogged'
 
 
-const Login = () => {
+const Login = ({setFormIsClose}) => {
 
   const [token, setToken] = useState('')
   const changedToken = localStorage.getItem('token')
@@ -19,7 +19,7 @@ const Login = () => {
         token ?
         <UserLogged />
         :
-        <FormLogin />
+        <FormLogin setFormIsClose={setFormIsClose} />
       }
     </main>
   )

@@ -7,12 +7,17 @@ import CategoryFilter from './home/CategoryFilter'
 import InputSearch from './home/InputSearch'
 import PriceFilter from './home/PriceFilter'
 import './home/style/home.css'
+import FormUser from './users/FormUser'
+import axios from 'axios'
 
-const Home = () => {
+const Home = ({formIsClose}) => {
 
     const [inputSearch, setInputSearch] = useState('')
     const [filterProducts, setFilterProducts] = useState()
     const [objFilterPrice, setObjFilterPrice] = useState({})
+
+    console.log(formIsClose);
+    
 
     const products = useSelector(state => state.products)
      //filtro por Categorias
@@ -32,7 +37,7 @@ const Home = () => {
     useEffect(() => {
         dispatch(getAllProducts())
     }, [])
-console.log(objFilterPrice);
+// console.log(objFilterPrice);
     useEffect(() => {
         const filter = products?.filter(e => {
             const price = Number(e.price)
@@ -58,9 +63,18 @@ console.log(objFilterPrice);
    
 
     // console.log(inputSearch);
+    const createNewUser = data => {
+        const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/users'
+        axios.post(URL, data)
+            .then(res => console.log(res.data))
+            .catch(err => console.log(err))
+    }
   return (
     <main className='home'>
         <InputSearch setInputSearch={setInputSearch} />
+        <div className={`formUser__container ${formIsClose === false ? true : 'disable__form'}`}>
+            <FormUser createNewUser={createNewUser}/>
+        </div>
         <CategoryFilter />
         <PriceFilter  setObjFilterPrice={setObjFilterPrice}/>
         <div className='home__container__card'>
