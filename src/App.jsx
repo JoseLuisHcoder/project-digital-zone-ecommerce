@@ -43,6 +43,7 @@ function App() {
       <Header />
       <Routes>
         <Route  path='/' element={<Home formIsClose={formIsClose} />}/>
+        <Route />
         <Route  path='/login' element={<Login setFormIsClose={setFormIsClose} />}/>
         <Route  path='/product/:id' element={<ProductDetail />}/>
         <Route element={<ProtectedRoutes />}>

@@ -43,10 +43,29 @@ a {
     text-decoration: none;
     color: inherit;
 }
+.home__filters {
+    display: flex;
+    justify-content: space-around;
+    
+}
 
-.category_filter {
-    display: none;
+.category_filter {  
+    display:flex;
+    flex-direction: column;
+    
+}
+.category_filter_ul {
+    cursor: pointer;
+    
+}
+
+.category_filter_li:hover {
+    color: grey;
+}
+.category_filter_li {
+cursor: pointer;
 }
 .price_filter {
-    display: none;
+    display: flex;
+    flex-direction: column;
 }

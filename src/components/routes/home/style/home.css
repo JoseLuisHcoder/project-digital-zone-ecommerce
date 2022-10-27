@@ -87,6 +87,7 @@ transition: opacity 400ms ease-out;
     color: white;
 }
 .formUser__container {
+    display: none;
     background-color: orangered;
 }
 .disable__form {

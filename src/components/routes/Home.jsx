@@ -72,11 +72,14 @@ const Home = ({formIsClose}) => {
   return (
     <main className='home'>
         <InputSearch setInputSearch={setInputSearch} />
-        <div className={`formUser__container ${formIsClose === false ? true : 'disable__form'}`}>
+        <div className={`formUser__container ${formIsClose && 'disable__form'}`}>
             <FormUser createNewUser={createNewUser}/>
         </div>
-        <CategoryFilter />
-        <PriceFilter  setObjFilterPrice={setObjFilterPrice}/>
+        <div className='home__filters'>
+            <CategoryFilter />
+            <PriceFilter  setObjFilterPrice={setObjFilterPrice}/>
+
+        </div>
         <div className='home__container__card'>
             {
                 filterProducts ? 

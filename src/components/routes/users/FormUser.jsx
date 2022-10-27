@@ -1,5 +1,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import { useNavigate } from 'react-router-dom'
 import './style/formUser.css'
 
 const FormUser = ({createNewUser}) => {
@@ -19,6 +20,13 @@ const FormUser = ({createNewUser}) => {
     phone: "",
     role: ""
    }
+
+   const navigate = useNavigate()
+
+   const handleLogin = () => {
+    navigate('/login')
+   }
+
   return (
     <form className='form' onSubmit={handleSubmit(submit)}>
         <div className='form__title'>
@@ -52,7 +60,7 @@ const FormUser = ({createNewUser}) => {
         <button className='form__btn'>Sing up</button>
         <div>
             <span>Already have an account?</span>
-            <button className='form__btn__login'>Log in</button>
+            <div onClick={handleLogin} className='form__btn__login'>Log in</div>
         </div>
     </form>
   )

@@ -25,11 +25,11 @@ const CategoryFilter = () => {
   return (
     <div className='category_filter'>
         <h3>Categoy</h3>
-            <ul>
+            <ul className='category_filter_ul'>
                 <li onClick={handleClickAllProducts} >All Products</li>
                 {
                     categories?.map(category => (
-                        <li onClick={() => handleClickCategory(category.id)} key={category.id}>{category.name}</li>
+                        <li className='category_filter_li' onClick={() => handleClickCategory(category.id)} key={category.id}>{category.name}</li>
                     ))
                 }
             </ul>
