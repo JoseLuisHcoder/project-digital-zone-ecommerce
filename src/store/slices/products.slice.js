@@ -12,12 +12,12 @@ const productsSlice = createSlice({
 })
 export const {setProducts} = productsSlice.actions
 export default productsSlice.reducer
-
+console.log(setProducts);
 export const getAllProducts = () => (dispatch) => {
     dispatch(setIsLoadingGlobal(true))
-    const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/products'
+    const URL = 'https://e-commerce-api-v2.academlo.tech/api/v1/products'
     return axios.get(URL)
-        .then(res => dispatch(setProducts(res.data.data.products)))
+        .then(res => dispatch(setProducts(res.data)))
         .catch(err => console.log(err))
         .finally(() => dispatch(setIsLoadingGlobal(false)))
 }

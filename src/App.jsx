@@ -21,7 +21,7 @@ function App() {
 
   // COMENTAMOS PORQUE SOLO SE NECESITA PARA CREAR UN USARIO NUEVO
   // useEffect(() => {
-  //   const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/users'
+  //   const URL = 'https://e-commerce-api-v2.academlo.tech/api/v1/users'
   //   const obj = {
   //       firstName: 'Ronaldinho',
   //       lastName: 'De Souza',
@@ -43,7 +43,6 @@ function App() {
       <Header />
       <Routes>
         <Route  path='/' element={<Home formIsClose={formIsClose} />}/>
-        <Route />
         <Route  path='/login' element={<Login setFormIsClose={setFormIsClose} />}/>
         <Route  path='/product/:id' element={<ProductDetail />}/>
         <Route element={<ProtectedRoutes />}>

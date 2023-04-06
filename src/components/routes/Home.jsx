@@ -69,6 +69,7 @@ const Home = ({formIsClose}) => {
             .then(res => console.log(res.data))
             .catch(err => console.log(err))
     }
+    console.log(products);
   return (
     <main className='home'>
         <InputSearch setInputSearch={setInputSearch} />

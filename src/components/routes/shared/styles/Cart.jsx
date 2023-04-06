@@ -9,7 +9,7 @@ const Cart = () => {
  
     const getAllProductsCart = () => {
         
-        const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/cart'
+        const URL = 'https://e-commerce-api-v2.academlo.tech/api/v1/cart'
         axios.get(URL, getConfig())
             .then(res => {
                 const products = res.data.data.cart.products
