@@ -22,10 +22,10 @@ export const getAllProducts = () => (dispatch) => {
         .finally(() => dispatch(setIsLoadingGlobal(false)))
 }
 
-export const getProductByCategory = (id) => (dispatch) => {
-    const URL = `https://ecommerce-api-react.herokuapp.com/api/v1/products?category=${id}`
+export const getProductByCategory = (nameItem) => (dispatch) => {
+    const URL = `https://e-commerce-api-v2.academlo.tech/api/v1/products?title=${nameItem}`
     return axios.get (URL)
-    .then(res => dispatch(setProducts(res.data.data.products)))
+    .then(res => dispatch(setProducts(res.data)))
     .catch(err => console.log(err))
 }
 

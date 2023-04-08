@@ -12,7 +12,7 @@ const CategoryFilter = () => {
             .then(res => setCategories(res.data))
             .catch(err => console.log(err))
     }, [])
-// console.log(categories);
+console.log(categories);
     const dispatch = useDispatch()
     const handleClickCategory = id => {
         dispatch(getProductByCategory(id))
