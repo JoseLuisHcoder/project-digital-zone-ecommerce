@@ -28,7 +28,7 @@ function App() {
   //       email: 'datatest@gmail.com', 
   //       password: 'data123',
   //       phone:'1284367891',
-  //       role: 'admin'
+  //       
   //     }
     
   //   axios.post(URL, obj)

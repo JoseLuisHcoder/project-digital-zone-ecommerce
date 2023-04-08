@@ -12,14 +12,15 @@ const Cart = () => {
         const URL = 'https://e-commerce-api-v2.academlo.tech/api/v1/cart'
         axios.get(URL, getConfig())
             .then(res => {
-                const products = res.data.data.cart.products
+                const products = res.data
+              
                 setCartProducts(products)
-
+                
                 const total = products.reduce((acc, cv) => {
-                    return Number(cv.price) * cv.productsInCart.quantity + acc
+                    return acc + Number(cv.product.price) * cv.quantity
                 }, 0)
                 setTotalPrice(total)
-                console.log(totalPrice);
+                // console.log(totalPrice);
             } )
             .catch(err => setCartProducts())
     }
@@ -31,7 +32,7 @@ const Cart = () => {
 
     const handleCheckout = () => {
 
-        const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/purchases'
+        const URL = 'https://e-commerce-api-v2.academlo.tech/api/v1/purchases'
         const obj = {
                 street: "Tarija",
                 colony: "lati",

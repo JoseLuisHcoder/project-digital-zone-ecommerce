@@ -12,7 +12,7 @@ const productsSlice = createSlice({
 })
 export const {setProducts} = productsSlice.actions
 export default productsSlice.reducer
-console.log(setProducts);
+
 export const getAllProducts = () => (dispatch) => {
     dispatch(setIsLoadingGlobal(true))
     const URL = 'https://e-commerce-api-v2.academlo.tech/api/v1/products'

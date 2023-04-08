@@ -13,17 +13,17 @@ const CardHome = ({product}) => {
 
     const handleAddCart = e => {
         e.stopPropagation()
-        const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/cart'
+        const URL = 'https://e-commerce-api-v2.academlo.tech/api/v1/cart'
         const obj = {
-            id: product.id,
+            productId: product.id,
             quantity: 1
         }
 
         axios.post(URL, obj, getConfig())
-            .then(res => console.log(red.data))
+            .then(res => console.log(res.data))
             .catch(err => console.log(err))
     }   
-    console.log(product);
+    // console.log(product);
   return (
     <article onClick={handleClick} className='card__home'>
         <header className='card__home__header'>

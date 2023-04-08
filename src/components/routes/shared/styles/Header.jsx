@@ -6,7 +6,7 @@ import '../../style/header.css'
 const Header = () => {
 
     const navbar = useRef()
-    console.log(navbar.current);
+    // console.log(navbar.current);
 
     const clickMenuHam = () => {
         navbar.current.classList.toggle('header__nav__open')

@@ -13,13 +13,13 @@ const ProductDetail = () => {
   const [productInfo, setProductInfo] = useState()
   const [indexClass, setIndexClass] = useState(0)
   useEffect(() => {
-    const URL = `https://ecommerce-api-react.herokuapp.com/api/v1/products/${id}`
+    const URL = `https://e-commerce-api-v2.academlo.tech/api/v1/products/${id}`
     axios.get(URL)
-      .then(res => setProductInfo(res.data.data.product))
+      .then(res => setProductInfo(res.data))
       .catch(err => console.log(err))
 
   }, [])
-  console.log(productInfo);
+  // console.log(productInfo);
 
   
   
@@ -46,10 +46,10 @@ const ProductDetail = () => {
         <div onClick={clickPrev} className='slider__prev'>&#60;</div>
         <div  className={`slider__container ${classImg[indexClass]}`}>
           {
-            productInfo?.productImgs.map(imgSrc => (
+            productInfo?.images.map(url => (
               <img 
-              key={imgSrc}
-              src={imgSrc}
+              key={url.id}
+              src={url.url}
               alt="" 
               className='slider__imgs'/>
             ))

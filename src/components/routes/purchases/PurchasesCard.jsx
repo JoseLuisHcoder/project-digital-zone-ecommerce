@@ -6,12 +6,12 @@ const PurchasesCard = ({purchase}) => {
   return (
     <article className='purchase__card'>
         <h3 className='purchase__date'>{purchase.createdAt}</h3>
-        <ul className='purchases__products'>{
-            purchase.cart.products.map(product =>(
-                <ProductPurchase key={product.id} 
-                product={product} />
-            ))
-            }
+        <ul className='purchases__products'>
+            <li className='detail__pur'>
+            <h4 className='detail__pur__title'>{purchase.product.title}</h4>
+            <span className='detail__pur__quantity'>{purchase.quantity}</span>
+            <span className='detail__pur__price'>$ {purchase.product.price}</span>
+          </li>
         </ul>
     </article>
     

@@ -16,7 +16,7 @@ const Home = ({formIsClose}) => {
     const [filterProducts, setFilterProducts] = useState()
     const [objFilterPrice, setObjFilterPrice] = useState({})
 
-    console.log(formIsClose);
+    // console.log(formIsClose);
     
 
     const products = useSelector(state => state.products)
@@ -69,7 +69,7 @@ const Home = ({formIsClose}) => {
             .then(res => console.log(res.data))
             .catch(err => console.log(err))
     }
-    console.log(products);
+    // console.log(products);
   return (
     <main className='home'>
         <InputSearch setInputSearch={setInputSearch} />

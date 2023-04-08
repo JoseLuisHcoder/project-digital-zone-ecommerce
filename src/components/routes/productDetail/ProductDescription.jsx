@@ -13,15 +13,16 @@ const ProductDescription = ({productInfo}) => {
     }
   }
   const handleAddCart = () => {
-    const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/cart'
+    const URL = 'https://e-commerce-api-v2.academlo.tech/api/v1/cart'
     const obj = {
-      id: productInfo.id,
-      quantity: counter
+      quantity: counter,
+      productId: productInfo.id
+      
     }
     axios.post(URL, obj, getConfig())
       .then(res => console.log(res.data))
       .catch(err => console.log(err))
-
+console.log(productInfo);
   }
   return (
     <section  className='product__info'>
