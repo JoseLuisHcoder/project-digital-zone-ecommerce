@@ -13,7 +13,7 @@ const Purchases = () => {
           .then(res => setPurchases(res.data))
           .catch(err => console.log(err))
       }, [])
-      console.log(purchases);
+      // console.log(purchases);
 
 
   return (

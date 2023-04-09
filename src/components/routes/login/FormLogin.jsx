@@ -3,7 +3,8 @@ import { useForm } from 'react-hook-form'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import './style/formLogin.css'
-const FormLogin = ({setFormIsClose}) => {
+
+const FormLogin = ({}) => {
 
     const {register, handleSubmit, reset} = useForm()
     const [isErrorLogin, setIsErrorLogin] = useState(false)
@@ -15,7 +16,7 @@ const FormLogin = ({setFormIsClose}) => {
         axios.post(URL, data)
         
             .then(res => {
-                    console.log(res.data)
+                    // console.log(res.data)
                 localStorage.setItem('token', res.data.token)
                 navigate('/')
                 })
@@ -33,8 +34,8 @@ const FormLogin = ({setFormIsClose}) => {
         })
     }
     const handleOpenFormUser = () => {
-     
-        setFormIsClose(false)
+     navigate('/formuser')
+       
     }
   return (
     <div className='login'>
@@ -49,11 +50,11 @@ const FormLogin = ({setFormIsClose}) => {
                 <ul className='login__list'>
                     <li className='login__item'>
                         <label className='login__label'  htmlFor="email">Email</label>
-                        <input className='login__input' {...register('email')} type="email" id="email" />
+                        <input className='login__input' style={{marginLeft:'30px'}} {...register('email')} type="email" id="email" />
                     </li>
                     <li className='login__item'>
                     <label  className='login__label' htmlFor="password">Password</label>
-                        <input className='login__input' {...register('password')} type="password" id="password" />
+                        <input className='login__input' {...register('password')} style={{marginLeft:'6px'}} type="password" id="password" />
                     </li>
                     <div>
                         {

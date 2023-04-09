@@ -13,8 +13,8 @@ const ProductCartInfo = ({product, getAllProductsCart}) => {
       .catch(err => console.log(err))
   }
   return (
-    <article className='cart__item'>
-        <header className='cart__item__header'>
+    <article  className='cart__item'>
+        <header style={{paddingTop:'40px'}} className='cart__item__header'>
             <h4 className='cart__category'>{product.product.brand}</h4>
             <h3 className='cart__name'>{product.product.title}</h3>
         </header>

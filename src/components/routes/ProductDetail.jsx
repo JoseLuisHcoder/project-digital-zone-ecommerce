@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import ProductDescription from './productDetail/ProductDescription'
 import './style/productDetail.css'
+import SimilarProducts from './productDetail/SimilarProducts'
 
 const classImg = [ '', 'second__img', 'third__img']
 
@@ -12,6 +13,8 @@ const ProductDetail = () => {
   const {id} = useParams()
   const [productInfo, setProductInfo] = useState()
   const [indexClass, setIndexClass] = useState(0)
+  
+
   useEffect(() => {
     const URL = `https://e-commerce-api-v2.academlo.tech/api/v1/products/${id}`
     axios.get(URL)
@@ -20,8 +23,6 @@ const ProductDetail = () => {
 
   }, [])
   // console.log(productInfo);
-
-  
   
   const clickPrev = () => {
     const prevClass = indexClass - 1
@@ -64,6 +65,7 @@ const ProductDetail = () => {
         </div>
       </div>
       <ProductDescription productInfo={productInfo}/>
+      <SimilarProducts categoryId={productInfo?.category.id} />
     </div>
   )
 }

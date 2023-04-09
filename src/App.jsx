@@ -16,9 +16,9 @@ import ProtectedRoutes from './components/routes/routes1/ProtectedRoutes'
 import FormUser from './components/routes/users/FormUser'
 
 
-function App() {
-  const [formIsClose, setFormIsClose] = useState(true)
 
+function App() {
+  
   // COMENTAMOS PORQUE SOLO SE NECESITA PARA CREAR UN USARIO NUEVO
   // useEffect(() => {
   //   const URL = 'https://e-commerce-api-v2.academlo.tech/api/v1/users'
@@ -42,13 +42,14 @@ function App() {
     <div className='App'>
       <Header />
       <Routes>
-        <Route  path='/' element={<Home formIsClose={formIsClose} />}/>
-        <Route  path='/login' element={<Login setFormIsClose={setFormIsClose} />}/>
+        <Route  path='/' element={<Home  />}/>
+        <Route  path='/login' element={<Login />}/>
         <Route  path='/product/:id' element={<ProductDetail />}/>
         <Route element={<ProtectedRoutes />}>
             <Route  path='/purchases' element={<Purchases />}/>
             <Route  path='/cart' element={<Cart />}/>
         </Route>
+        <Route  path='/formuser'element={<FormUser />} />
       </Routes>
     </div>
   )
