@@ -1,0 +1,30 @@
+.footer-container {
+    background-color: #4f4f4f;
+    padding: 50px 0;
+    font-size: 10px;
+}
+
+.footer__title {
+    color: #ffffff;
+    text-align: center;
+}
+
+.footer__social-network {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 27px;
+}
+
+.footer__social {
+    font-size: 27px;
+    border: 1px solid #4f4f4f;
+    border-radius: 50%;
+    padding: 11px;
+    aspect-ratio: 1;
+    background-color: #ababab30;
+}
+
+.bx2 {
+    color: #ffffff;
+}

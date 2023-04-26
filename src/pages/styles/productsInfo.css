@@ -1,0 +1,28 @@
+@media (min-width: 700px) {
+    .productInfo-container {
+        display: flex;
+        margin-top: 80px;
+        width: 100%;
+        max-width: 1024px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+.similarProducts-container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.similarProducts__title {
+    color: #f85555;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.similarProducts__info {
+    margin-bottom: 70px;
+    display: flex;
+    flex-wrap: wrap;
+}

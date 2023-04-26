@@ -1,0 +1,56 @@
+.filter__price-container {
+    margin-top: 70px;
+}
+
+.filter__price-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.filter__price-line {
+    border: 1px solid gainsboro;
+    margin-bottom: 20px;
+}
+
+.filter__price-form {
+    margin-bottom: 50px;
+}
+
+.filter__price-form-from {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5px;
+}
+
+.filter__price-form-to {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5px;
+    margin-bottom: 20px;
+}
+
+.filter__price-form-input {
+    padding: 7px;
+    border: 1px solid #aaa7;
+}
+
+.filter__price-form-label {
+    font-weight: 400;
+    color: dimgray;
+    padding-top: 6px;
+}
+
+.filter__price-form-btn {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #F85555;
+    color: rgba(255, 255, 255, 0.919);
+}
+ 
+.filter__price-btnContainer {
+    display: flex;
+    justify-content: end;
+}

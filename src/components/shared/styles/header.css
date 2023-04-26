@@ -1,0 +1,52 @@
+.header-container {
+    margin-bottom: 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: white;
+}
+
+.header__icons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 20px;
+}
+
+.header__icon-title {
+    margin-right: 90px;
+    margin-left: 20px;
+    font-weight: 700;
+    font-size: 21px;
+}
+
+.header__icon-ecommerce {
+    color: #F85555;
+}
+
+.header__icon-login, 
+.header__icon-cart,
+.header__icon-home,
+.header__icon-purchase {
+    font-size: 23px;
+    text-align: center;
+            
+}
+.header__icon-p {
+    font-size: 16px;
+    color: grey;
+    margin-top: -5px;
+}
+.header__icon-cart {
+    padding-right: 20px;
+}
+.active-link i {
+       color: #F85555;
+}
+.bx {
+    color: #ababab;
+    font-weight: 400;
+}

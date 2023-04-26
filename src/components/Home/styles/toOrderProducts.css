@@ -1,0 +1,5 @@
+.filter__orderProducts-container {
+    margin-top: 40px;
+    display: grid;
+    row-gap: 10px;
+}

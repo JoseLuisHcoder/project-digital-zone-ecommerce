@@ -1,0 +1,166 @@
+.login-container {
+    padding: 40px 25px 25px;
+    width: 80%;
+    max-width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100vh;
+    border: 1px solid #f8f8f8;
+    border-radius: 10px;
+    max-height: 525px;
+    background-color: #ffffff;
+}
+
+.logout-container {
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    grid-template-rows: 50px 50px 0px;
+    padding: 50px 25px 25px;
+    width: 80%;
+    max-width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100vh;
+    border: 1px solid #f8f8f8;
+    border-radius: 10px;
+    max-height: 210px;
+    background-color: #ffffff;
+}
+
+.logout-btn {
+    background-color: white;
+    color: #2fa8f8;
+    position: relative;
+    bottom: 25px;
+}
+
+.logout-title {
+    font-size: 15px;
+    color: #515151;
+}
+
+.bx-user-circle {
+    font-size: 120px;
+    font-weight: 200;
+}
+
+.fa-circle-user {
+    font-size: 100px;
+    color: white;
+}
+
+
+.boxicon__user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-regular.fa-circle-user::before {
+    background-color: #F85555;
+    border-radius: 60px;
+}
+
+.logout-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    background-color: #f8f8f8;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+}
+
+.login__title {
+    font-size: 23px;
+    font-weight: 500;
+    color: rgb(81,81,81);
+
+}
+
+.login__test {
+    background-color: #d8f6fd;
+    margin-top: 30px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 15px;
+    color: rgb(81,81,81);
+}
+
+.login__test-title {
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+}
+
+.login__test-titleContainer {
+    margin-bottom: 10px;
+}
+
+.bx-envelope, .bx-lock-alt {
+    font-size: 21px;
+    color: rgb(81,81,81);
+    padding-right: 15px;
+}
+
+.login__test-info-title {
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.login__form-email {
+    display: grid;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.login__form-email-label, .login__form-password-label {
+    color: rgb(81,81,81);
+    font-size: 15px;
+}
+
+.login__form-email-input, .login__form-password-input {
+    font-size: 1rem;
+    border: 1px solid rgba(185, 185, 185, 0.656);
+    border-radius: 3px;
+    width: 100%;
+    padding: 10px;
+    color: rgb(81,81,81);
+
+}
+
+.login__form-password {
+    display: grid;
+    gap: 5px;
+}
+
+.login__form-btn {
+    margin-top: 30px;
+    width: 100%;
+    padding: 11px 0;
+    background-color: #F85555;
+    color: white
+}
+
+.login__form-btn-title {
+    font-size: 15px;
+}
+
+.login__register {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgb(81,81,81);
+    margin-top: 25px;
+}
+
+.login__register-span {
+    color: #2FA8F8
+}
